@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button, { Label, Icon } from '@smui/button';
-
+	import '@videojs/themes/dist/city/index.css';
+	
 	let clicked = 0;
 
 	function handleClick(event: CustomEvent | MouseEvent) {
@@ -27,6 +28,11 @@
 		<span class="grayed">You haven't clicked the button.</span>
 	{/if}
 </p>
+
+<video id="movie-player" class="video-js vjs-deafult-skin" controls preload="auto" width="640" height="264">
+	<source src="file:///Users/zed/Projects/Zovies-UI/zovies/example.mp4" type="video/mp4" />
+</video>
+
 
 <style>
 	.grayed {
