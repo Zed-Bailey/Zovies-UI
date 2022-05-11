@@ -34,7 +34,12 @@
 </p>
 
 
-<CardGrid/>
+<div class="movie-grid-center">
+	
+	<CardGrid/>
+	
+</div>
+
 
 <!-- <video id="movie-player" class="video-js vjs-deafult-skin" controls preload="auto" width="640" height="264">
 	<source src="./example.mp4" type="video/mp4" />
@@ -48,7 +53,13 @@
 		opacity: 0.6;
 	}
 
-	* :global(.card-media-square) {
+	/* center movie grid in the middle of the screen */
+	.movie-grid-center {
+		display: flex;
+		height: 100vh;
+		justify-content: center;
+	}
+	/* * :global(.card-media-square) {
     	background-image: url(https://place-hold.it/320x320?text=square&fontsize=23);
-  	}
+  	} */
 </style>
