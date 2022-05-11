@@ -20,7 +20,7 @@
 	}
 </script>
 
-<Button on:mousedown={handleClick}>
+<!-- <Button on:mousedown={handleClick}>
 	<Icon class="material-icons">thumb_up</Icon>
 	<Label>Click Me</Label>
 </Button>
@@ -31,7 +31,7 @@
 	{:else}
 		<span class="grayed">You haven't clicked the button.</span>
 	{/if}
-</p>
+</p> -->
 
 
 <div class="movie-grid-center">
@@ -59,7 +59,4 @@
 		height: 100vh;
 		justify-content: center;
 	}
-	/* * :global(.card-media-square) {
-    	background-image: url(https://place-hold.it/320x320?text=square&fontsize=23);
-  	} */
 </style>
