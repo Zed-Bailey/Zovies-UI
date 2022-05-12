@@ -1,15 +1,5 @@
 <script lang="ts">
-import Card ,{ Media } from '@smui/card';
-
-import ImageList, {
-        Item,
-        ImageAspectContainer,
-        Image,
-        Supporting,
-        Label,
-    } from '@smui/image-list';
-    import LayoutGrid, { Cell } from '@smui/layout-grid';
-import MovieCard from './MovieCard.svelte';
+    import MovieCard from './MovieCard.svelte';
 </script>
 
 
@@ -28,7 +18,8 @@ import MovieCard from './MovieCard.svelte';
         flex-wrap: wrap;
         justify-content: start;
         /* adjust to center grid */
-        width: 80%;
+        /* width: 80%; */
+        height: 100%;
     }
 
     .col {
