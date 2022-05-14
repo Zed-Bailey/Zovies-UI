@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Drawer, { AppContent, Content, Header, Subtitle, Title } from '@smui/drawer';
 	import List, { Graphic, Item, Text } from '@smui/list';
+
 	import Separator from '@smui/list/src/Separator.svelte';
 
 	let clicked = 'Home';
@@ -27,7 +28,7 @@
 	<Drawer style="height: 100%;">
 		<Header>
 			<Title>Zovies</Title>
-			<Subtitle>something</Subtitle>
+			<Subtitle>Zeds Movie Service</Subtitle>
 		</Header>
 		<Content>
 			<List>
@@ -45,19 +46,14 @@
 				</Item>
 				
 				<Item
-					href="javascript:void(0)"
+					href="/download"
 					on:click={() => (clicked = 'Download')}
 					activated={clicked === 'Download'}
 				>
 					<Graphic class="material-icons" aria-hidden="true">download</Graphic>
 					<Text>Download</Text>
 				</Item>
-				<Item href="javascript:void(0)" on:click={() => (clicked = 'All of the Shrimp')}>
-					<Text>All of the Shrimp</Text>
-				</Item>
-				<Item href="javascript:void(0)" on:click={() => (clicked = 'A Planet with a Mall')}>
-					<Text>A Planet with a Mall</Text>
-				</Item>
+				<Item disabled></Item>
 				<Separator />
 
 				<Item>
