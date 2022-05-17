@@ -45,10 +45,10 @@
 {#if !submitted}
   <div class="solo-demo-container solo-container">
     <Paper class="solo-paper" elevation={6}>
-      <Icon class="material-icons">search</Icon>
+      <Icon class="material-icons">download</Icon>
       <Input
         bind:value={url}
-        placeholder="Search"
+        placeholder="Lookmovie player url"
         class="solo-input"
       />
     </Paper>
