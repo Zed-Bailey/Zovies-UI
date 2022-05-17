@@ -1,12 +1,14 @@
-<script lang="ts">
-import { page } from '$app/stores';
+<script>
+    import { page } from '$app/stores';
 
     import '@videojs/themes/dist/city/index.css';
+
+
     import { ApiBase } from '../persistent/api';
     import Chip, { Set, Text } from '@smui/chips';
-import List from '@smui/list/src/List.svelte';
-import { each } from 'svelte/internal';
-import { Graphic, Item } from '@smui/list';
+    import List from '@smui/list/src/List.svelte';
+
+    import { Graphic, Item } from '@smui/list';
 
 
     const id = $page.url.searchParams.get('id')
@@ -18,11 +20,8 @@ import { Graphic, Item } from '@smui/list';
 		console.log(json);
 		return json;
 	})()
-</script>
 
-<!-- <video id="movie-player" class="video-js vjs-deafult-skin" controls preload="auto" width="640" height="264">
-	<source src="./example.mp4" type="video/mp4" />
-</video> -->
+</script>
 
 <style>
     .container {  
@@ -71,10 +70,18 @@ import { Graphic, Item } from '@smui/list';
 {:then data} 
     <div class="container">
         <div class="video-player">
-            <video id="movie-player" class="video-js vjs-deafult-skin" controls preload="auto">
-                <track kind="captions"/>
-	            <source src={data['details']['movieFileUrl']} type="video/mp4" />
-            </video>
+            {#if data['details']['movieFileUrl'] === ""}
+                <h4 class="mdc-typography--headline4">Movie still downloading...Check back later</h4>
+            {:else}
+            
+                <video id="movie-player"  class="video-js vjs-theme-city"  controls preload="auto">
+                    <track kind="captions"/>
+                    <source src={ApiBase+data['details']['movieFileUrl']}/>
+                </video>
+            
+               
+            {/if}
+            
         </div>
         <div class="cover">
             <img src={data['details']['coverUrl']} alt={data['movieName']}/>
@@ -85,7 +92,6 @@ import { Graphic, Item } from '@smui/list';
         <div class="information">
             <p class="mdc-typography--headline6">Released {data['details']['year']}</p>
             <span class="mdc-typography--headline6" style="text-align: center;">{data['details']['rating']} ⭐</span>
-            <!-- <Graphic class="material-icons" aria-hidden="true" style="justify-content: center;">star</Graphic> -->
             
             
             <Set chips={data['details']['genres'].split(',')} let:chip nonInteractive>
