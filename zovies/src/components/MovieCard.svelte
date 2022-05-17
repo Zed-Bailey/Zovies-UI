@@ -21,10 +21,11 @@
 
 <div class="card-container">
   <Card style="width: 300px; height: 450px; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0,0, 0, 0.4) 97%), url({coverImageUrl}); ">
+    <!-- <Card style="width: 300px; height: 450px; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0,0, 0, 0.4) 97%), url({coverImageUrl}); "></Card> -->
     <PrimaryAction on:click={movieClicked}>
          <Content style="height: 450px;">
             <div style="color: #fff; position: absolute; bottom: 16px; left: 16px;">
-              <h2 class="mdc-typography--headline6" style="margin: 0;">{title}</h2>
+              <!-- <h2 class="mdc-typography--headline6" style="margin: 0;">{title}</h2> -->
               <!-- <h3 class="mdc-typography--subtitle2" style="margin: 0;">And a subtitle. {movieID}</h3> -->
             </div>
          </Content>
