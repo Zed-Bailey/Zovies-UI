@@ -6,7 +6,6 @@
 	const movies = (async () =>  {
 		const response = await fetch(ApiBase + "/movie")
 		const json = await response.json()
-		console.log(json);
 		return json;
 	})()
 </script>
@@ -17,7 +16,11 @@
 	{#await movies}
 		<p>Waiting.......</p>
 	{:then data} 
+	{#if data.length == 0}
+		<h3 class="mdc-typography--headline3">No movies downloaded</h3>
+	{:else}
 		<CardGrid {data}/>	
+	{/if}
 	{:catch error}
 		<p>An error occurred! {error}</p>
 	{/await}
