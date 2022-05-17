@@ -4,6 +4,9 @@
 //
 @use '@material/typography/mdc-typography';
 
+@use '@material/circular-progress/index' as circular-progress;
+@use '@material/theme/index' as theme;
+
 html,
 body {
 	padding: 0;
@@ -12,4 +15,10 @@ body {
 
 .container {
 	padding: 30px;
+}
+
+.my-four-colors {
+  @include circular-progress.indeterminate-colors(
+    theme.$green-500 theme.$yellow-500 theme.$red-500 theme.$blue-500
+  );
 }
