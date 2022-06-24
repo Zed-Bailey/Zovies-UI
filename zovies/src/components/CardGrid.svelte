@@ -1,7 +1,7 @@
 <script lang="ts">
     import MovieCard from './MovieCard.svelte';
     import LayoutGrid from '@smui/layout-grid';
-import Cell from '@smui/layout-grid/src/Cell.svelte';
+    import Cell from '@smui/layout-grid/src/Cell.svelte';
 
     export let data: [];
 </script>
