@@ -1,8 +1,7 @@
 # Zovies-UI
 The UI for [the Zovies backend](https://github.com/Zed-Bailey/Zovies)
 
-Developed with svelte this web app will run on your local network and stream movies from the backend faster then a streaming service
-enjoy watching your movies with no buffering :)
+Developed with svelte this web app will run on your local network and stream movies from the backend with faster then a streaming service, enjoy watching your movies with no buffering :)
 
 
 ## Setup
@@ -15,3 +14,14 @@ enjoy watching your movies with no buffering :)
 - execute `npm run build` which will invoke the svelte compiler to build a production version of the application into a `build/` folder 
 - then run the application with `sudo PORT=80 node build` which will deploy the application running on port 80
 - navigate to the IP address noted down before, if the api is running then volia, zovies is setup for you
+
+## Screen shots
+
+**Home**
+<img src="./.github/home.png" width="500" alt="home image">
+
+**Search**
+<img src="./.github/search.png" width="500" alt="search image">
+
+**Search with keyword**
+<img src="./.github/search_by_keyword.png" width="500" alt="search with keyword">
