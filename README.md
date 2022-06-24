@@ -17,11 +17,11 @@ Developed with svelte this web app will run on your local network and stream mov
 
 ## Screen shots
 
-**Home**
+#### Home
 <img src="./.github/home.png" width="500" alt="home image">
 
-**Search**
+#### Search
 <img src="./.github/search.png" width="500" alt="search image">
 
-**Search with keyword**
+#### Search with keyword
 <img src="./.github/search_by_keyword.png" width="500" alt="search with keyword">
