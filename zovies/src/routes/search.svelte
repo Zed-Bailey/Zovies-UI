@@ -4,10 +4,11 @@
     import Textfield from '@smui/textfield';
     import { ApiBase } from "../persistent/api";
     import IconButton, { Icon } from '@smui/icon-button';
-import Fab from "@smui/fab/dist/Fab.svelte";
+    import Fab from "@smui/fab/dist/Fab.svelte";
 
-    let generes = ['action', 'adventure'];
-    let chosenGenre = '';
+    let generes = ['action', 'adventure', 'comedy', 'drama', 'fantasy', 'horror', 'mystery', 'romance', 'thriller'];
+    let chosenGenre = ''; 
+    
 
     let ratings = ['0', '1', '2', '3', '4', '5', '6', '7', '8',  '9'];
     let chosenRating = '';
@@ -21,9 +22,9 @@ import Fab from "@smui/fab/dist/Fab.svelte";
         searchClicked = true;
         filtered = [];
         let query = '/movie/filter?';
-        // if(chosenGenre != undefined) query += 'genre=' + chosenGenre + '&';
-        // if(chosenRating != undefined) query += 'rating=' + chosenRating + '&';
-        if(searchTerm != undefined && searchTerm != '') query += 'searchterm='+searchTerm;
+        if(chosenGenre != undefined && chosenGenre != '') query += 'genre=' + chosenGenre + '&';
+        if(chosenRating != undefined && chosenRating != '') query += 'rating=' + chosenRating + '&';
+        if(searchTerm != undefined && searchTerm != '') query += 'search='+searchTerm;
         // all filter params were empty
         if (query === '/filter?') {
             searchClicked = false;
@@ -38,7 +39,7 @@ import Fab from "@smui/fab/dist/Fab.svelte";
 
 <div style="display: flex; align-items:center;">
     <div class="col">
-        <Textfield bind:value={searchTerm} label="Search For"></Textfield>
+        <Textfield bind:value={searchTerm} label="Movie name"></Textfield>
     </div>
     <div class="col">
         <Select bind:value={chosenGenre} label="Genre">
